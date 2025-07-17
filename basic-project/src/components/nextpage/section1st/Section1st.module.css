@@ -1,0 +1,218 @@
+.section {
+  /* padding: 32px 20px 60px 20px; */
+  background: #ffffff;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  position: relative;
+}
+
+
+.content {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #333, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  opacity: 0.8;
+  color: #666;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  color: #555;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  /* margin-top: 60px; */
+}
+
+.featureCard {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 350px;
+  position: relative;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+/* Individual card background images */
+.featureCard:nth-child(1) {
+  background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.featureCard:nth-child(2) {
+  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.featureCard:nth-child(3) {
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+.featureCard:nth-child(4) {
+  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+
+/* Overlay for better text readability */
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.featureCard:hover::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(182, 186, 190, 0.8));
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* Alternative: Local image paths (uncomment and replace URLs above if using local images) */
+/*
+.featureCard:nth-child(1) {
+  background-image: url('./images/card1.jpg');
+}
+
+.featureCard:nth-child(2) {
+  background-image: url('./images/card2.jpg');
+}
+
+.featureCard:nth-child(3) {
+  background-image: url('./images/card3.jpg');
+}
+
+.featureCard:nth-child(4) {
+  background-image: url('./images/card4.jpg');
+}
+*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .featureCard {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .featureIcon {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+  
+  .featureCard {
+    height: 280px;
+  }
+}

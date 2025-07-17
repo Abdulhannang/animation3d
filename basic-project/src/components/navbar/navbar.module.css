@@ -1,0 +1,181 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: transparent;
+  color: white;
+}
+
+.logoWrapper {
+  border: 2px solid white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: Icenter;
+  border-radius: 50%;
+  position: relative;
+  font-weight: bold;
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+.mapPopup {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
+}
+
+.mapContainer {
+  height: 200px;
+  width: 200px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.navLinks li:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.navLinks li a:active,
+.navLinks li a:focus {
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+
+.active {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburgerIcon {
+  font-size: 28px;
+  color: white;
+}
+
+.mobileMenuBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Navigation Menu */
+.mobileNavLinks {
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  transition: right 0.3s ease;
+  z-index: 998;
+  border-left: 1px solid rgba(255, 255, 255, 0.179);
+}
+
+.mobileNavOpen {
+  right: 0;
+}
+
+.mobileNavLinks li {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.mobileNavLinks li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  display: block;
+  padding: 15px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLinks li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .navLinks {
+    display: none;
+  }
+  
+  .mobileMenuBtn {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .logoWrapper {
+    padding: 8px;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+  
+  .mobileNavLinks {
+    width: 100%;
+    right: -100%;
+  }
+  
+  .mobileNavOpen {
+    right: 0;
+  }
+}
